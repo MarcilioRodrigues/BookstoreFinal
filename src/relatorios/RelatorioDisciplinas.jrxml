@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioDisciplinas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fbaf23dc-606c-48b1-957e-aa6f7617a972">
+	<property name="ireport.zoom" value="1.948717100000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="31"/>
+	<queryString>
+		<![CDATA[SELECT * FROM tbdisciplina INNER JOIN tbcurso ON tbdisciplina.codcurso = tbcurso.codcurso]]>
+	</queryString>
+	<field name="coddisciplina" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codcurso" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomedisciplina" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomecurso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="56" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="56" backcolor="#999999" uuid="52931676-7b8d-47a5-ab59-baf6d7558681"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="117" y="2" width="382" height="50" uuid="21ea3566-0d6d-4592-b098-3403531852ca"/>
+				<textElement>
+					<font fontName="Arial" size="36"/>
+				</textElement>
+				<text><![CDATA[Relatório de Disciplinas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="555" height="26" backcolor="#CCCCCC" uuid="cfd61b90-31d1-4bc1-934f-3ccb9958b657"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="117" y="6" width="148" height="20" uuid="1288766e-9ecf-4f3a-8b79-b03124be5274"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NOME DISCIPLINA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="6" width="111" height="20" uuid="25565f55-7c6f-4728-8d0b-64339a5137fe"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NOME DO CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="6" width="66" height="20" uuid="15367035-9109-467a-a3e9-5d99ff5e8f8b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[COD DISC]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="3" width="66" height="20" uuid="fedee7ec-5fc5-475c-b47e-b1d1e44ef804"/>
+				<textFieldExpression><![CDATA[$F{coddisciplina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="3" width="184" height="20" uuid="90bcbe7f-3d4b-4071-b649-d7c4a598a97b"/>
+				<textFieldExpression><![CDATA[$F{nomedisciplina}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="3" width="183" height="20" uuid="4b25f04f-5cbc-4751-ac9e-07437c70050d"/>
+				<textFieldExpression><![CDATA[$F{nomecurso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="533" y="40" width="22" height="14" uuid="72945a25-af8b-4e15-9817-075fbbe43a0d"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="496" y="40" width="37" height="14" uuid="138addd0-46f1-48d8-8b3d-f6d89cb9ae8b"/>
+				<text><![CDATA[Página]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="4" y="38" width="66" height="13" uuid="4743fa76-3911-4172-8524-fa81eac2df5b"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
