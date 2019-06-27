@@ -33,7 +33,7 @@ O sistema foi desenvolvido em JAVA utilizando o IDE NetBeans, foi utilizado a bi
 Como utilizar o sistema
 ======
 1. Abra o NetBeans, clique no menu "EQUIPE" > "GIT" e clique em "CLONAR".
-2. Coloque o caminho do projeto Bookstore "https://github.com/MarcilioRodrigues/bookprojetofinal.git"
+2. Coloque o caminho do projeto Bookstore "https://github.com/MarcilioRodrigues/Bookstorefinal.git"
 3. Após clonado e aberto o projeto, clique nas bibliotecas do projeto e crie uma nova biblioteca com o nome "iReport/iReport-5.5.1".
 4. E adicione todos os .Jar que estão nas pastas:
   - BookleProjeto\library\iReport-5.5.1\ireport\libs\
